@@ -124,10 +124,23 @@ def detectColor():
         cv2.imshow("Result", imgResult)
         cv2.waitKey(0)
 
-def contour():
+def morph():
     img = cv2.imread('./shapes.png')
-    cv2.imshow("Original", img)
+    
 
+    imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    imgBlur = cv2.GaussianBlur(imgGray, (7,7), 1)
+    imgCanny = cv2.Canny(imgBlur,50,50)
+
+
+    cv2.imshow("Original", img)
+    cv2.imshow("Gaussian", imgBlur)
+    cv2.imshow("Canny", imgCanny)
     cv2.waitKey(0)
 
-contour()
+def contours(img):
+    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL)
+
+
+
+morph()
