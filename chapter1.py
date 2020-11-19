@@ -124,5 +124,4 @@ def detectColor():
         cv2.imshow("Result", imgResult)
         cv2.waitKey(0)
 
-
-detectColor()
+useVideo()
