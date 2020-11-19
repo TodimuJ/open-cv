@@ -124,4 +124,10 @@ def detectColor():
         cv2.imshow("Result", imgResult)
         cv2.waitKey(0)
 
-useVideo()
+def contour():
+    img = cv2.imread('./shapes.png')
+    cv2.imshow("Original", img)
+
+    cv2.waitKey(0)
+
+contour()
