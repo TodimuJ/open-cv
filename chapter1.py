@@ -144,7 +144,15 @@ def morph():
                 objCor = len(approx)
                 x,y,w,h = cv2.boundingRect(approx)
 
+                if objCor == 3: 
+                    objectType = "Tri"
+                else:
+                    objectType = "None"
+
                 cv2.rectangle(imgContour, (x,y), (x+w,y+h), (0, 255, 0), 2)
+                cv2.putText(imgContour, objectType, (x+(w//2)-10), (y+(h//2)-10), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0,255,255),2) 
+
+
 
 
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
