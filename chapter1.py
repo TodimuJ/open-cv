@@ -150,7 +150,7 @@ def morph():
                     objectType = "None"
 
                 cv2.rectangle(imgContour, (x,y), (x+w,y+h), (0, 255, 0), 2)
-                cv2.putText(imgContour, objectType, (x+(w//2)-10), (y+(h//2)-10), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0,255,255),2) 
+                cv2.putText(imgContour, objectType, (x+(w//2)-10), (y+(h//2)-10), cv2.FONT_HERSHEY_COMPLEX, 0.5, (10,50,20),2) 
 
 
 
