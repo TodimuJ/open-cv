@@ -175,7 +175,7 @@ def morph():
     cv2.imshow("Contour", imgContour)
     cv2.waitKey(0)
 
-def faces():
+def faceDetection():
 
     faceCascade = cv2.CascadeClassifier("./haarcascade_frontalface_default.xml")
     # img = cv2.imread('./lena.png')
@@ -193,4 +193,4 @@ def faces():
 
 
 
-faces()
+faceDetection()
