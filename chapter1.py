@@ -177,7 +177,7 @@ def morph():
 
 def faceDetection():
 
-    faceCascade = cv2.CascadeClassifier("./haarcascade_frontalface_default.xml")
+    faceCascade = cv2.CascadeClassifier("./haarcascade_frontalface_default.xml") 
     img = cv2.imread('./faces.jpg')
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -192,4 +192,21 @@ def faceDetection():
     cv2.waitKey(0)
 
 
-faceDetection()
+def marker();
+
+    frameWidth = 640
+    frameHeight = 480
+
+    cap = cv2.VideoCapture(1)
+    cap.set(3, frameWidth)
+    cap.set(4, frameHeight)
+    cap.set(10, 150)
+
+    while True:
+        success, img = cap.read()
+        cv2.imshow("Result", img)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+
+marker()
