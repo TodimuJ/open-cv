@@ -149,12 +149,12 @@ def findColor(): #Finds the color of an object by user varying slider to mask ou
     while True:
         _, img = cap.read()
         imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-        h_min = cv2.getTrackbarPos("Hue Min", "TrackBars")
-        h_max = cv2.getTrackbarPos("Hue Max", "TrackBars")
-        s_min = cv2.getTrackbarPos("Sat  Min", "TrackBars")
-        s_max = cv2.getTrackbarPos("Sat Max", "TrackBars")
-        v_min = cv2.getTrackbarPos("Val Min", "TrackBars")
-        v_max = cv2.getTrackbarPos("Val Max", "TrackBars")
+        h_min = cv2.getTrackbarPos("Hue Min", "HSV")
+        h_max = cv2.getTrackbarPos("Hue Max", "HSV")
+        s_min = cv2.getTrackbarPos("Sat  Min", "HSV")
+        s_max = cv2.getTrackbarPos("Sat Max", "HSV")
+        v_min = cv2.getTrackbarPos("Val Min", "HSV")
+        v_max = cv2.getTrackbarPos("Val Max", "HSV")
         #print(v_min)
         lower = np.array([h_min, s_min, v_min])
         upper = np.array([h_max, s_max, v_max])
@@ -173,7 +173,6 @@ def findColor(): #Finds the color of an object by user varying slider to mask ou
 
     cap.release()
     cv2.destroyAllWindows()
-
 
 def morph():
     img = cv2.imread('./shapes.png')
