@@ -42,7 +42,7 @@ def useVideo():
     # Destroy all the windows 
     cv2.destroyAllWindows() 
 
-def imgProcessing():
+def imgProcessing(): #Adds guassian blur effect and utilizes Canny edge detection
 
     kernel = np.ones((5, 5), np.uint8)
 
@@ -60,7 +60,7 @@ def imgProcessing():
     cv2.imshow("Erosion Image", imgErosion)
     cv2.waitKey(0) 
  
-def shapeDraw():
+def shapeDraw(): #Draws different shapes and adds text to an image
 
     img = np.zeros((512, 512, 3), np.uint8)
     # img[:] = 120,28, 67
