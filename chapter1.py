@@ -251,7 +251,9 @@ def marker():
     cap.set(4, frameHeight)
     cap.set(10, 150)
 
-    myColors = []
+    myColors = [[],
+                [], 
+                []]
 
     def findColor(img):
         imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
