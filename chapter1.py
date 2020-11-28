@@ -4,7 +4,7 @@ import numpy as np
 #source env/bin/activate
 print("Package Imported")
 
-def editImage():
+def editImage(): #Display, resize and crop an image
     img = cv2.imread("./lambo.jpeg")
     print(img.shape)
     imgResize = cv2.resize(img, (300, 200))
